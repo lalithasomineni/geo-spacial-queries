@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "693771de-7a3e-468f-a66d-9b9d5784cc29",
+		"name": "restaurants",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all restuarants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"chinese restaurant\",\r\n\"description\":\"good food\",\r\n\"rating\": 3,\r\n\"geometry\":{\"type\":\"Point\",\"coordinates\":[40,26.78]}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete restuarants",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"chinese restaurant\",\r\n\"description\":\"good food\",\r\n\"rating\": 3,\r\n\"geometry\":{\"type\":\"Point\",\"coordinates\":[40,26.78]}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/restaurant/5f48e950ec23aa426a787310",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"restaurant",
+						"5f48e950ec23aa426a787310"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update restaurant",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"thai restaurant\",\r\n\"description\":\"good food\",\r\n\"rating\": 3,\r\n\"geometry\":{\"type\":\"Point\",\"coordinates\":[80,26.78]}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/restaurant/5f48e97f6f900b4291343dde",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"restaurant",
+						"5f48e97f6f900b4291343dde"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empty database",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"thai restaurant\",\r\n\"description\":\"good food\",\r\n\"rating\": 3,\r\n\"geometry\":{\"type\":\"Point\",\"coordinates\":[80,26.78]}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add a restaurant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"chinese restaurant\",\r\n\"description\":\"good food\",\r\n\"rating\": 3,\r\n\"geometry\":{\"type\":\"Point\",\"coordinates\":[50,36.78]}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a restaurant in between 100000 mts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"chinese restaurant\",\r\n\"description\":\"good food\",\r\n\"rating\": 3,\r\n\"geometry\":{\"type\":\"Point\",\"coordinates\":[40,26.78]}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/restaurant/?lng=50&lat=36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"restaurant",
+						""
+					],
+					"query": [
+						{
+							"key": "lng",
+							"value": "50"
+						},
+						{
+							"key": "lat",
+							"value": "36"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

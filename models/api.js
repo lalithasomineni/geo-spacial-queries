@@ -13,8 +13,7 @@ const GeoSchema = new Schema({
     }
 });
 
-// create ninja Schema & model
-const restSchema = new Schema({
+const restuarantSchema = new Schema({
     name: {
         type: String,
         required: [true, 'Name field is required']
@@ -22,12 +21,21 @@ const restSchema = new Schema({
     description: {
         type: String
     },
-    rating: {
-        type: [Number],
+    rating:{
+        type: Number,
+    },
+    overallrating:{
+        type: Number,
+        default: 4
+    },
+    numberofrating:{
+
+        type: Number,
+        default: 7
     },
     geometry: GeoSchema
 });
 
-const Rest = mongoose.model('rest', restSchema);
+const Restaurant = mongoose.model('restaurant', restuarantSchema);
 
-module.exports = Rest;
+module.exports = Restaurant;
