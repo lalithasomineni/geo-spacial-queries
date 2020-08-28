@@ -28,14 +28,21 @@ router.post('/add', function(req, res, next){
         rating: req.body.rating,
         description:req.body.description,
         geometry: req.body.geometry
-    });
-    newrest.save()
+    }).save()
     .then(result=>{
-        res.json({result});
-}).catch(err=>{
-    res.json(err);
-})});
+            res.json({restaurant:{
+                name:result.name,
+                description:result.description,
+                overallrating: (result.overallrating*result.numberofrating+result.rating)/result.numberofrating+1,
+                numberofrating: result.numberofrating+1
+            }
+            
+        }).catch(err=>{
+            res.json(err);
+        })
+})
 
+})
 router.put('/restaurant/:id', function(req, res, next){
     Restaurant.findByIdAndUpdate({_id: req.params.id}, req.body).then(function(){
         Restaurant.findOne({_id: req.params.id}).then(function(result){

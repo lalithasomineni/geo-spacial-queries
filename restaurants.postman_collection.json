@@ -163,7 +163,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"name\":\"chinese restaurant\",\r\n\"description\":\"good food\",\r\n\"rating\": 3,\r\n\"geometry\":{\"type\":\"Point\",\"coordinates\":[50,36.78]}}",
+					"raw": "{\"name\":\"thai restaurant\",\r\n\"description\":\"good food\",\r\n\"rating\": 4,\r\n\"geometry\":{\"type\":\"Point\",\"coordinates\":[60,36.78]}}",
 					"options": {
 						"raw": {
 							"language": "json"
